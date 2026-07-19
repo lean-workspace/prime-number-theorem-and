@@ -118,14 +118,14 @@ plugins:
   # Citations machinery disabled: this repo renders Lean blueprints, not literature
   # notes with a BibTeX bibliography.
   - source: github:quartz-community/citations
-    enabled: false
+    enabled: true
     options:
       bibliographyFile: ./bibliography.bib
       suppressBibliography: false
       linkCitations: true
     order: 85
   - source: ./quartz/plugins/local/literature-citations
-    enabled: false
+    enabled: true
     options:
       bibliographyFile: ./bibliography.bib
       papersRoot: papers

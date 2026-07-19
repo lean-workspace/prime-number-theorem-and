@@ -1,8 +1,16 @@
 {
-  "label": "Demo proof",
+  "label": "PNT+ blueprint",
   "pages": [
-    { "page": "dep-graph", "type": "canvas", "title": "Dependency canvas" },
-    "Ch01_SumsOfOddNumbers",
-    "02-further-sums"
+    {
+      "page": "dep-graph",
+      "type": "canvas",
+      "title": "Dependency canvas"
+    },
+    "01-the-project",
+    "02-basic-definitions-and-notation",
+    "03-first-approach-wiener-ikehara-tauberian-theorem",
+    "04-second-approach",
+    "05-third-approach",
+    "06-elementary-corollaries"
   ]
 }

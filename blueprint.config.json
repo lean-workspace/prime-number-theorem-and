@@ -3,10 +3,28 @@
   "blueprints": [
     {
       "root": "blueprint",
-      "source": { "type": "dir" },
+      "source": {
+        "type": "dir"
+      },
       "pageMode": "chapter",
-      "lakeRoots": ["Ch01_SumsOfOddNumbers"],
-      "repo": "self-evolving/lean-workspace-template"
+      "lakeRoots": [
+        "PrimeNumberTheoremAnd.Defs",
+        "PrimeNumberTheoremAnd.Wiener",
+        "PrimeNumberTheoremAnd.Rectangle",
+        "PrimeNumberTheoremAnd.ResidueCalcOnRectangles",
+        "PrimeNumberTheoremAnd.PerronFormula",
+        "PrimeNumberTheoremAnd.MellinCalculus",
+        "PrimeNumberTheoremAnd.SmoothExistence",
+        "PrimeNumberTheoremAnd.ZetaConj",
+        "PrimeNumberTheoremAnd.ZetaBounds",
+        "PrimeNumberTheoremAnd.MediumPNT",
+        "PrimeNumberTheoremAnd.HadamardFactorization",
+        "PrimeNumberTheoremAnd.HoffsteinLockhart",
+        "PrimeNumberTheoremAnd.StrongPNT",
+        "PrimeNumberTheoremAnd.Consequences"
+      ],
+      "leanSrcDirs": [".lake/packages/PrimeNumberTheoremAnd"],
+      "repo": "AlexKontorovich/PrimeNumberTheoremAnd"
     }
   ]
 }
