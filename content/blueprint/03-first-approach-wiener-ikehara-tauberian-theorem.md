@@ -519,7 +519,7 @@ Artin $L$-function.
 
 ### Proof
 
-See Propositions 7.1.16, 7.1.19 of \url{https://www.math.ucla.edu/ sharifi/algnum.pdf}.
+See Propositions 7.1.16, 7.1.19 of <https://www.math.ucla.edu/ sharifi/algnum.pdf>.
 
 ## Lemma: Simple pole {#Dedekind-pole}
 
@@ -527,7 +527,7 @@ $\zeta_L$ has a simple pole at $s=1$.
 
 ### Proof
 
-See Theorem 7.1.12 of \url{https://www.math.ucla.edu/ sharifi/algnum.pdf}.
+See Theorem 7.1.12 of <https://www.math.ucla.edu/ sharifi/algnum.pdf>.
 
 ## Lemma: Dedekind-nonvanishing {#Dedekind-nonvanishing}
 
@@ -542,12 +542,12 @@ adapt the arguments for the Dirichet L-function.
 
 **The Chebotarev density theorem: the case of abelian extensions**
 
-(Use the arguments in Theorem 7.2.2 of \url{https://www.math.ucla.edu/ sharifi/algnum.pdf} to extend the
+(Use the arguments in Theorem 7.2.2 of <https://www.math.ucla.edu/ sharifi/algnum.pdf> to extend the
 previous results to abelian extensions (actually just cyclic extensions would suffice))
 
 **The Chebotarev density theorem: the general case**
 
-(Use the arguments in Theorem 7.2.2 of \url{https://www.math.ucla.edu/ sharifi/algnum.pdf} to extend the
+(Use the arguments in Theorem 7.2.2 of <https://www.math.ucla.edu/ sharifi/algnum.pdf> to extend the
 previous results to arbitrary extensions
 
 ## Lemma: PNT for one character {#Dedekind-PNT}
