@@ -95,9 +95,7 @@ $$
 for all $x \geq 1$ (this hypothesis is not strictly necessary, but simplifies the arguments and
 can be obtained fairly easily in applications).
 
-## Lemma: Preliminary decay bound I {#prelim-decay lean="prelim_decay"}
-
-\discussion{561}
+## Lemma: Preliminary decay bound I {#prelim-decay lean="prelim_decay" discussion="561"}
 
 If $\psi:\mathbb{R} \to \mathbb{C}$ is absolutely integrable then 
 $$
@@ -110,9 +108,7 @@ $$
 
 Immediate from the triangle inequality.
 
-## Lemma: Preliminary decay bound II {#prelim-decay-2 lean="prelim_decay_2"}
-
-\discussion{562}
+## Lemma: Preliminary decay bound II {#prelim-decay-2 lean="prelim_decay_2" discussion="562"}
 
 If $\psi:\mathbb{R} \to \mathbb{C}$ is absolutely integrable and of bounded variation, then
 
@@ -132,9 +128,7 @@ $$
 
 and the claim then follows from the triangle inequality.
 
-## Lemma: Preliminary decay bound III {#prelim-decay-3 lean="prelim_decay_3"}
-
-\discussion{563}
+## Lemma: Preliminary decay bound III {#prelim-decay-3 lean="prelim_decay_3" discussion="563"}
 
 If $\psi:\mathbb{R} \to \mathbb{C}$ is absolutely integrable, absolutely continuous, and $\psi'$ is of bounded
 variation, then
@@ -149,9 +143,7 @@ for all non-zero $u \in \mathbb{R}$.
 
 Should follow from previous lemma.
 
-## Lemma: Decay bound, alternate form {#decay-alt lean="decay_alt"}
-
-\discussion{564}
+## Lemma: Decay bound, alternate form {#decay-alt lean="decay_alt" discussion="564"}
 
 If $\psi:\mathbb{R} \to \mathbb{C}$ is absolutely
 integrable, absolutely continuous, and $\psi'$ is of bounded variation, then
