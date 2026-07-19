@@ -119,7 +119,9 @@ export function renderNavItem(
   const current = currentSlug === item.slug
   const hasChildren = item.children && item.children.length > 0
   const sectionId = hasChildren ? docsNavSectionId(item) : undefined
-  const expanded = active
+  // Sections ship expanded so the landing page shows the chapter list;
+  // the inline script still honors a visitor's persisted collapse choices.
+  const expanded = true
   const itemHref = resolveRelative(currentSlug, item.slug)
   const hasPage = allSlugs.includes(item.slug)
   const currentPageToc = current && !hasChildren ? renderActivePageToc(activePageToc) : null
