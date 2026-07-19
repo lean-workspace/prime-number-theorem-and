@@ -76,12 +76,12 @@ $$
   so by Fubini's theorem it suffices to verify the identity
   
 $$
-\begin{align*}
+\begin{aligned}
   \int_{-\log x}^\infty e^{-u(\sigma-1)} e(-\frac{tu}{2\pi})\ du
   &= \int_{-\log x}^\infty e^{(it - \sigma + 1)u}\ du \\
   &= \frac{1}{it - \sigma + 1} e^{(it - \sigma + 1)u}\ \Big|_{-\log x}^\infty \\
   &= x^{\sigma - 1} \frac{1}{\sigma+it-1} x^{it}
-  \end{align*}
+  \end{aligned}
 $$
 
 Now let $A \in \mathbb{C}$, and suppose that there is a continuous function $G(s)$ defined on
@@ -89,17 +89,13 @@ $\mathrm{Re} s \geq 1$ such that $G(s) = F(s) - \frac{A}{s-1}$ whenever $\mathrm
 We also make the Chebyshev-type hypothesis
 
 $$
-\begin{equation*}
 \sum_{n \leq x} |f(n)| \ll x
-\end{equation*}
 $$
 
 for all $x \geq 1$ (this hypothesis is not strictly necessary, but simplifies the arguments and
 can be obtained fairly easily in applications).
 
-## Lemma: Preliminary decay bound I {#prelim-decay lean="prelim_decay"}
-
-\discussion{561}
+## Lemma: Preliminary decay bound I {#prelim-decay lean="prelim_decay" discussion="561"}
 
 If $\psi:\mathbb{R} \to \mathbb{C}$ is absolutely integrable then 
 $$
@@ -112,9 +108,7 @@ $$
 
 Immediate from the triangle inequality.
 
-## Lemma: Preliminary decay bound II {#prelim-decay-2 lean="prelim_decay_2"}
-
-\discussion{562}
+## Lemma: Preliminary decay bound II {#prelim-decay-2 lean="prelim_decay_2" discussion="562"}
 
 If $\psi:\mathbb{R} \to \mathbb{C}$ is absolutely integrable and of bounded variation, then
 
@@ -134,9 +128,7 @@ $$
 
 and the claim then follows from the triangle inequality.
 
-## Lemma: Preliminary decay bound III {#prelim-decay-3 lean="prelim_decay_3"}
-
-\discussion{563}
+## Lemma: Preliminary decay bound III {#prelim-decay-3 lean="prelim_decay_3" discussion="563"}
 
 If $\psi:\mathbb{R} \to \mathbb{C}$ is absolutely integrable, absolutely continuous, and $\psi'$ is of bounded
 variation, then
@@ -151,9 +143,7 @@ for all non-zero $u \in \mathbb{R}$.
 
 Should follow from previous lemma.
 
-## Lemma: Decay bound, alternate form {#decay-alt lean="decay_alt"}
-
-\discussion{564}
+## Lemma: Decay bound, alternate form {#decay-alt lean="decay_alt" discussion="564"}
 
 If $\psi:\mathbb{R} \to \mathbb{C}$ is absolutely
 integrable, absolutely continuous, and $\psi'$ is of bounded variation, then

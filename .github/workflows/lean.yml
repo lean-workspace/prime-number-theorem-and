@@ -57,6 +57,24 @@ jobs:
         uses: leanprover/lean-action@v1
         with:
           use-github-cache: true
+          # Companion mode: the adopted library is a Lake dependency, not a
+          # root-package target, so a plain `lake build` builds nothing and the
+          # extractor finds no .oleans. Build the lakeRoots modules explicitly.
+          build-args: >-
+            +PrimeNumberTheoremAnd.Defs
+            +PrimeNumberTheoremAnd.Wiener
+            +PrimeNumberTheoremAnd.Rectangle
+            +PrimeNumberTheoremAnd.ResidueCalcOnRectangles
+            +PrimeNumberTheoremAnd.PerronFormula
+            +PrimeNumberTheoremAnd.MellinCalculus
+            +PrimeNumberTheoremAnd.SmoothExistence
+            +PrimeNumberTheoremAnd.ZetaConj
+            +PrimeNumberTheoremAnd.ZetaBounds
+            +PrimeNumberTheoremAnd.MediumPNT
+            +PrimeNumberTheoremAnd.HadamardFactorization
+            +PrimeNumberTheoremAnd.HoffsteinLockhart
+            +PrimeNumberTheoremAnd.StrongPNT
+            +PrimeNumberTheoremAnd.Consequences
 
       - uses: actions/setup-node@v5
         with:

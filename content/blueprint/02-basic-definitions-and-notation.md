@@ -99,9 +99,7 @@ $$
 E_\pi(x) \leq \varepsilon(x_0).
 $$
 
-## Lemma: Admissible bound decreasing for large x {#admissible-bound-monotone lean="admissible_bound.mono"}
-
-\discussion{900}
+## Lemma: Admissible bound decreasing for large x {#admissible-bound-monotone lean="admissible_bound.mono" discussion="900"}
 
 If $A,B,C,R > 0$ then the classical bound is monotone
   decreasing for $x \geq \exp( R (2B/C)^2 )$.
@@ -111,9 +109,7 @@ If $A,B,C,R > 0$ then the classical bound is monotone
 Differentiate the bound and check the
   sign.
 
-## Lemma: Classic bound implies numerical bound {#classical-to-numeric lean="Eψ.classicalBound.to_numericalBound, Eθ.classicalBound.to_numericalBound, Eπ.classicalBound.to_numericalBound" uses="Epsi-def, classical-bound-psi, classical-bound-theta, Etheta-def, classical-bound-pi, Epi-def"}
-
-\discussion{901}
+## Lemma: Classic bound implies numerical bound {#classical-to-numeric lean="Eψ.classicalBound.to_numericalBound, Eθ.classicalBound.to_numericalBound, Eπ.classicalBound.to_numericalBound" uses="Epsi-def, classical-bound-psi, classical-bound-theta, Etheta-def, classical-bound-pi, Epi-def" discussion="901"}
 
 A classical bound for $x \geq x_0$ implies a numerical
   bound for $x \geq \max(x_0,

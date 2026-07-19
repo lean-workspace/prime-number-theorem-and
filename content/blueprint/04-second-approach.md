@@ -209,10 +209,10 @@ Let $a:\mathbb{R}\to\mathbb{C}$ be a function, and let $\sigma>0$ be a real numb
 ### Proof
 
 $$
-\begin{align*}
+\begin{aligned}
   \lim_{\sigma'\to\infty}a(\sigma) &= \lim_{\sigma'\to\infty}a(\sigma') \\
   &= 0
-  \end{align*}
+  \end{aligned}
 $$
 
 ## Lemma: limitOfConstantLeft {#limitOfConstantLeft lean="limitOfConstantLeft"}
@@ -224,10 +224,10 @@ Let $a:\mathbb{R}\to\mathbb{C}$ be a function, and let $\sigma<-3/2$ be a real n
 ### Proof
 
 $$
-\begin{align*}
+\begin{aligned}
     \lim_{\sigma'\to-\infty}a(\sigma) &= \lim_{\sigma'\to-\infty}a(\sigma') \\
     &= 0
-  \end{align*}
+  \end{aligned}
 $$
 
 ## Lemma: tendsto-rpow-atTop-nhds-zero-of-norm-lt-one {#tendsto_rpow_atTop_nhds_zero_of_norm_lt_one lean="tendsto_rpow_atTop_nhds_zero_of_norm_lt_one"}
@@ -628,10 +628,7 @@ The Mellin transform of a convolution is the product of the Mellin transforms.
 Let $f$ and $g$ be functions from $\mathbb{R}_{>0}$ to $\mathbb{C}$ such that
   
 $$
-\begin{equation*}
     (x,y)\mapsto f(y)\frac{g(x/y)}yx^{s-1}
-    
-  \end{equation*}
 $$
 
   is absolutely integrable on $[0,\infty)^2$.
