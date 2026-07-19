@@ -76,12 +76,12 @@ $$
   so by Fubini's theorem it suffices to verify the identity
   
 $$
-\begin{align*}
+\begin{aligned}
   \int_{-\log x}^\infty e^{-u(\sigma-1)} e(-\frac{tu}{2\pi})\ du
   &= \int_{-\log x}^\infty e^{(it - \sigma + 1)u}\ du \\
   &= \frac{1}{it - \sigma + 1} e^{(it - \sigma + 1)u}\ \Big|_{-\log x}^\infty \\
   &= x^{\sigma - 1} \frac{1}{\sigma+it-1} x^{it}
-  \end{align*}
+  \end{aligned}
 $$
 
 Now let $A \in \mathbb{C}$, and suppose that there is a continuous function $G(s)$ defined on
@@ -89,9 +89,7 @@ $\mathrm{Re} s \geq 1$ such that $G(s) = F(s) - \frac{A}{s-1}$ whenever $\mathrm
 We also make the Chebyshev-type hypothesis
 
 $$
-\begin{equation*}
 \sum_{n \leq x} |f(n)| \ll x
-\end{equation*}
 $$
 
 for all $x \geq 1$ (this hypothesis is not strictly necessary, but simplifies the arguments and

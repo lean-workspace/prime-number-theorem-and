@@ -96,9 +96,7 @@ This is standard in the literature.
 ## Theorem: borelCaratheodory' {#borelCaratheodory' lean="borelCaratheodory'"}
 
 An application of
-    \begin{verbatim}
-      Complex.borelCaratheodory_zero.
-    \end{verbatim}
+    `Complex.borelCaratheodory_zero`.
 
 ### Proof
 
@@ -143,12 +141,10 @@ $$
     Thus,
     
 $$
-\begin{equation*}
         |f'(z)|=\left|\frac{1}{2\pi}\int_0^{2\pi}
           \frac{r'e^{it}\,f(r'e^{it})}{(r'e^{it}-z)^2}\,dt\right|
           \leq\frac{1}{2\pi}\int_0^{2\pi}
           \left|\frac{r'e^{it}\,f(r'e^{it})}{(r'e^{it}-z)^2}\right|\,dt.
-    \end{equation*}
 $$
 
     Now applying Theorem [borelCaratheodory'](#borelCaratheodory'), and noting that
@@ -207,9 +203,9 @@ Let $0<r<R$. Let $B:\overline{\mathbb{D}_{R}}\to\mathbb{C}$ be analytic on neigh
 We let $J_B(z)=I_{B'/B}(z)$. Then clearly, $J_B(0)=0$. Now note that
     
 $$
-\begin{align*}
+\begin{aligned}
         I_{B'/B}(z)=z\int_0^1(B'/B)(tz)\,dt=\int_0^z(B'/B)(u)\,du.
-    \end{align*}
+    \end{aligned}
 $$
 
     Thus by the fundamental theorem of calculus we have that $J_B'(z)=B'(z)/B(z)$. Now let
@@ -432,11 +428,9 @@ $$
     this into Definition [BlaschkeB](#BlaschkeB),
     
 $$
-\begin{equation*}
         |B_f(z)|=|h_z(z)|\cdot\left|R-\frac{|z|^2}{R}\right|^{m_f(z)}
           \prod_{\rho\in\mathcal{K}_f(r)\setminus\{z\}}
           \left|\frac{R-z\overline{\rho}/R}{z-\rho}\right|^{m_f(\rho)}.
-    \end{equation*}
 $$
 
     Trivially, $|h_z(z)|\neq 0$. Now note that
@@ -474,10 +468,8 @@ $$
     Thus, substituting this into Definition [BlaschkeB](#BlaschkeB),
     
 $$
-\begin{equation*}
         |B_f(z)|=|f(z)|\prod_{\rho\in\mathcal{K}_f(r)}
           \left|\frac{R-z\overline{\rho}/R}{z-\rho}\right|^{m_f(\rho)}.
-    \end{equation*}
 $$
 
     We know that $|f(z)|\neq 0$ since $z\not\in\mathcal{K}_f(r)$. Now note that
@@ -855,13 +847,13 @@ $$
 Note that, for $\rho\in\mathcal{Z}_{2t}$
     
 $$
-\begin{align*}
+\begin{aligned}
         \Re \left(\frac{1}{1+\delta+2it-\rho}\right)
           &=\Re \left(\frac{1+\delta-2it-\overline{\rho}}
             {(1+\delta+2it-\rho)(1+\delta-2it-\overline{\rho})}\right) \\
           &=\frac{\Re (1+\delta-2it-\overline{\rho})}{|1+\delta+2it-\rho|^2}
             =\frac{1+\delta-\Re \rho}{(1+\delta-\Re \rho)^2+(2t-\mathfrak{I}\rho)^2}.
-    \end{align*}
+    \end{aligned}
 $$
 
     Now since $\rho\in\mathcal{Z}_{2t}$, we have that $|\rho-(3/2+2it)|\leq 3/4$. So,
@@ -877,11 +869,9 @@ $$
     Which implies that
     
 $$
-\begin{equation*}
         0<\frac{8}{17}\,\delta
           \leq\frac{1+\delta-\Re \rho}{(1+\delta-\Re \rho)^2+(2t-\mathfrak{I}\rho)^2}
           =\Re \left(\frac{1}{1+\delta+2it-\rho}\right).
-    \end{equation*}
 $$
 
     Note that, from Lemma [SumBoundI](#SumBoundI), we have
@@ -920,13 +910,13 @@ $$
 Note that for $\rho'\in\mathcal{Z}_t$
     
 $$
-\begin{align*}
+\begin{aligned}
         \Re \left(\frac{1}{1+\delta+it-\rho'}\right)
           &=\Re \left(\frac{1+\delta-it-\overline{\rho'}}
             {(1+\delta+it-\rho')(1+\delta-it-\overline{\rho'})}\right) \\
           &=\frac{\Re (1+\delta-it-\overline{\rho'})}{|1+\delta+it-\rho'|^2}
             =\frac{1+\delta-\Re \rho'}{(1+\delta-\Re \rho')^2+(t-\mathfrak{I}\rho')^2}.
-    \end{align*}
+    \end{aligned}
 $$
 
     Now since $\rho'\in\mathcal{Z}_t$, we have that $|\rho'-(3/2+it)|\leq 3/4$. So, we
@@ -941,11 +931,9 @@ $$
     Which implies that
     
 $$
-\begin{equation*}
         0<\frac{8}{17}\,\delta
           \leq\frac{1+\delta-\Re \rho'}{(1+\delta-\Re \rho')^2+(t-\mathfrak{I}\rho')^2}
           =\Re \left(\frac{1}{1+\delta+it-\rho'}\right).
-    \end{equation*}
 $$
 
     Note that, from Lemma [SumBoundI](#SumBoundI), we have
@@ -1032,13 +1020,13 @@ $$
     Now applying Euler's identity
     
 $$
-\begin{align*}
+\begin{aligned}
         -3\,\Re \left(\frac{\zeta'}{\zeta}(1+\delta)\right)&
             -4\,\Re \left(\frac{\zeta'}{\zeta}(1+\delta+it)\right)
             -\Re \left(\frac{\zeta'}{\zeta}(1+\delta+2it)\right) \\
         &\qquad\qquad\qquad=\sum_{1\leq n}\Lambda(n)\,n^{-(1+\delta)}
             \left(3+4\cos(-it\log n)+\cos(-2it\log n)\right)
-    \end{align*}
+    \end{aligned}
 $$
 
     By Lemma (ThreeFourOneTrigIdentity) we know that the series on the right hand side
