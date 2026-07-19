@@ -23,6 +23,7 @@ import {
   anchorOf,
   loadBlueprintConfig,
   githubSourceUrl,
+  packageSourceRef,
   repoRelativePath,
   sourceRef,
 } from "../../../../scripts/lib/blueprint-model.mjs"
@@ -174,15 +175,24 @@ function snippetRepoPath(cfg, snippet) {
 }
 
 function sourceLocHtml(cfg, snippet) {
-  const repoPath = snippetRepoPath(cfg, snippet)
+  // prefer the true upstream source (Lake package at its pinned revision)
+  // over this repository's checkout at its own HEAD
+  const pkgRef = packageSourceRef(cfg.repoRoot, snippet)
+  const repoPath = pkgRef ? pkgRef.path : snippetRepoPath(cfg, snippet)
   const loc = `${repoPath ?? snippet.file}:${snippet.startLine}–${snippet.endLine}`
-  const href = repoPath
-    ? githubSourceUrl(cfg.repo, repoPath, {
-        ref: sourceRef(),
+  const href = pkgRef
+    ? githubSourceUrl(pkgRef.repo, pkgRef.path, {
+        ref: pkgRef.ref,
         startLine: snippet.startLine,
         endLine: snippet.endLine,
       })
-    : null
+    : repoPath
+      ? githubSourceUrl(cfg.repo, repoPath, {
+          ref: sourceRef(),
+          startLine: snippet.startLine,
+          endLine: snippet.endLine,
+        })
+      : null
   const locHtml = `<code>${escapeHtml(loc)}</code>`
   return href
     ? `<a class="bp-src-link" href="${href}" target="_blank" rel="noopener noreferrer">${locHtml}</a>`

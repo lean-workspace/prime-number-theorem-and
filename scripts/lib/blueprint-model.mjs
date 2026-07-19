@@ -143,6 +143,46 @@ export function repoRelativePath(repoRoot, absPath) {
   return rel.split(path.sep).join("/")
 }
 
+let cachedManifest = null
+function manifestPackages(repoRoot) {
+  if (cachedManifest && cachedManifest.root === repoRoot) return cachedManifest.pkgs
+  let pkgs = []
+  try {
+    const m = JSON.parse(fs.readFileSync(path.join(repoRoot, "lake-manifest.json"), "utf8"))
+    pkgs = (m.packages ?? []).filter((p) => p.name && p.url && p.rev)
+  } catch {}
+  cachedManifest = { root: repoRoot, pkgs }
+  return pkgs
+}
+
+// True source of a snippet: when it resolves inside a Lake package checkout
+// (.lake/packages/<name>) or a baked snippet whose file path starts with the
+// package's module root (adopted-project layouts name the root after the
+// package), the honest link target is the upstream repository at the
+// manifest's pinned revision — not this repository's copy at its own HEAD.
+export function packageSourceRef(repoRoot, snippet) {
+  if (!repoRoot || !snippet?.file) return null
+  const pkgs = manifestPackages(repoRoot)
+  if (!pkgs.length) return null
+  const file = String(snippet.file).replace(/\\/g, "/")
+  const baseName = snippet.baseDir ? path.basename(snippet.baseDir) : null
+  const inLake = snippet.baseDir
+    ? String(snippet.baseDir).includes(`.lake${path.sep}packages`)
+    : false
+  const first = file.split("/")[0]
+  const pkg =
+    (inLake && pkgs.find((p) => p.name === baseName)) ||
+    pkgs.find((p) => p.name === first) ||
+    pkgs.find((p) => String(p.name).toLowerCase() === String(first).toLowerCase())
+  if (!pkg) return null
+  const repo = String(pkg.url)
+    .trim()
+    .replace(/\.git$/, "")
+    .replace(/^https:\/\/github\.com\//, "")
+  if (!/^[^/\s]+\/[^/\s]+$/.test(repo)) return null
+  return { repo, ref: pkg.rev, path: file }
+}
+
 export function githubSourceUrl(repo, repoPath, { ref = sourceRef(), startLine, endLine } = {}) {
   if (!repo || !repoPath) return null
   const normalizedRepo = String(repo)
